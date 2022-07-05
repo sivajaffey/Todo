@@ -46,11 +46,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '185.27.134.10'),
+            'host' => env('DB_HOST', 'sql203.epizy.com'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'epiz_32089503_todo'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
+            'username' => env('DB_USERNAME', 'epiz_32089503'),
+            'password' => env('DB_PASSWORD', 'sX2wpVgvcmzUip'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -60,7 +60,8 @@ return [
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
+            ]
+            ) : [],
         ],
 
         'pgsql' => [

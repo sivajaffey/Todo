@@ -45,22 +45,25 @@
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                        <form method="post" action="/registerUser">    
                             <div class="flex items-center">
-                               Name : <input type="text" length="35">
+                                Name : <input name="name" type="text" length="35">
+                                </div>
+                                <div class="flex items-center">
+                                Email : <input name="email" type="email" length="35">
+                                </div>
+                                <div class="flex items-center">
+                                Password : <input name="password" type="password">
+                                </div>
+                                <div class="flex items-center">
+                                Confirm Password : <input name="confirm" type="password">
+                                </div>
+                                <div class="ml-3">
+                                    <button type="submit">Register</button>
+                                </div>
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             </div>
-                            <div class="flex items-center">
-                               Email : <input type="email" length="35">
-                            </div>
-                            <div class="flex items-center">
-                               Password : <input type="password">
-                            </div>
-                            <div class="flex items-center">
-                               Confirm Password : <input type="password">
-                            </div>
-                            <div class="ml-3">
-                                <button>Register</button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +22,4 @@ Route::get('/register', function () {
 Route::get('/home', function () {
     return view('landing');
 });
+Route::post('/registerUser', 'App\Http\Controllers\Controller@registerUser');
